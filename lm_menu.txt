@@ -1,0 +1,1598 @@
+Translator
+Jixun, <your name here>
+
+; 可以为 True 或 False
+; 为 True 时将输出至终端，否则输出至 lm_menu.log
+Log To Console
+True
+
+; 是否勾住 sprintf 函数
+; 勾住后可以处理一些非标字符。
+; 如果不需要勾住填入 False 即可
+; 如果需要勾住请填入 offset: 偏移, bytes: 备份字节数, validate: 简单的校验
+; 偏移: 该函数所在位置 - 模块基址
+; 简单的校验: 前 4 个字节的翻转
+Hook sprintf
+offset: 0x000FB2B2, bytes: 6, validate: 0x83EC8B55
+
+; 004FB2B2  /$  55            push ebp
+; 004FB2B3  |.  8BEC          mov ebp,esp
+; 004FB2B5  |.  83EC 20       sub esp,0x20
+
+; 顺序随意
+; 如果行开头为 ; 则为注释，自动忽略
+; 空行也会被忽略，如果需要翻译内容为空请填入一个空格。
+; 储存编码为 UTF-8 无 BOM，如果带有 BOM 请在最开头加入一个无关的翻译内容。
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 文件
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Open ROM...
+打开镜像 (&O)...
+
+Open &Level Number...	Ctrl+D
+打开关卡 (&L)...	Ctrl+D
+
+Open Level &Address...
+从地址打开关卡 (&A)...
+
+&Save Level to ROM	Ctrl+S
+储存关卡到镜像 (&S)	Ctrl+S
+
+&Save Level to ROM as...	Ctrl+I
+另存关卡到镜像为 (&S)...	Ctrl+I
+
+Open &Next Level in ROM	Pg-Up
+进入下一个关卡 (&N)	Pg-Up
+
+Open &Previous Level in ROM	Pg-Down
+进入上一个关卡 (&P)	Pg-Down
+
+Open Level from &File...
+从文件打开关卡 (&F)...
+
+Save Level &to File	Ctrl+W
+保存关卡至文件 (&T)	Ctrl+W
+
+Save Level t&o File as...
+保存关卡至文件为 (&O)...
+
+&Extract GFX from ROM
+从镜像提取图形 (&E)
+
+&Insert GFX to ROM...
+导入图形到镜像 (&I)...
+
+&Extract ExGFX from ROM
+从镜像提取扩展图形 (&E)
+
+&Insert ExGFX to ROM...
+导入扩展图形到镜像 (&I)...
+
+&Extract Old Bypass List from ROM...
+从镜像提取旧的跳过列表 (&E)...
+
+&Insert Old Bypass List to ROM...
+导入旧的跳过列表至镜像 (&I)...
+
+&Graphics
+图形 (&G)
+
+&Export Level Palette to File...
+导出关卡调色板至文件 (&E)...
+
+&Import Level Palette from File...
+从文件导入关卡调色板 (&I)...
+
+Extract Shared Palettes from &ROM...
+从镜像提取共享调色板 (&R)...
+
+Insert Shared Palettes to RO&M...
+Insert Shared Palettes to RO&M...
+
+&Palettes
+&Palettes
+
+&Export Multiple Levels to Files...
+&Export Multiple Levels to Files...
+
+&Import Multiple Levels from Files...
+&Import Multiple Levels from Files...
+
+&Clear Original Level Data Area...
+&Clear Original Level Data Area...
+
+&Export Level to Image File...
+&Export Level to Image File...
+
+&Levels
+&Levels
+
+Run ROM in &Emulator	F4
+Run ROM in &Emulator	F4
+
+&Setup Emulator...
+&Setup Emulator...
+
+&Run/Stop Internal Emulator	Ctrl+F4
+&Run/Stop Internal Emulator	Ctrl+F4
+
+&Pause Internal Emulator	Pause
+&Pause Internal Emulator	Pause
+
+&Mute Internal Emulator
+&Mute Internal Emulator
+
+Swap &F4/Ctrl+F4
+Swap &F4/Ctrl+F4
+
+&Emulator
+&Emulator
+
+Expand ROM to &2MB
+Expand ROM to &2MB
+
+Expand ROM to &3MB
+Expand ROM to &3MB
+
+Expand ROM to &4MB
+Expand ROM to &4MB
+
+Expand ROM to &6MB (SA-1)
+Expand ROM to &6MB (SA-1)
+
+Expand ROM to &8MB (SA-1)
+Expand ROM to &8MB (SA-1)
+
+E&xpand ROM
+E&xpand ROM
+
+&Create a Full Restore Point...
+&Create a Full Restore Point...
+
+&Restore ROM to previous state...
+&Restore ROM to previous state...
+
+&Create IPS file for this ROM...
+&Create IPS file for this ROM...
+
+&Apply IPS file to this ROM...
+&Apply IPS file to this ROM...
+
+&Restore
+&Restore
+
+&Recent Files
+&Recent Files
+
+E&xit
+E&xit
+
+&File
+文件 (&F)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 编辑
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Edit Level Layer &1 Mode	`
+Edit Level Layer &1 Mode	`
+
+Edit Level Layer &2 Mode	`
+Edit Level Layer &2 Mode	`
+
+Edit &Sprites Mode	Esc
+Edit &Sprites Mode	Esc
+
+&Undo	Ctrl+Z
+&Undo	Ctrl+Z
+
+&Redo	Ctrl+Y
+&Redo	Ctrl+Y
+
+Cu&t	Ctrl+X
+Cu&t	Ctrl+X
+
+&Copy	Ctrl+C
+&Copy	Ctrl+C
+
+&Paste	Ctrl+V
+&Paste	Ctrl+V
+
+&Delete	Delete
+&Delete	Delete
+
+&Insert Manual...	Insert
+&Insert Manual...	Insert
+
+&Edit Manual...	Alt-Right Click
+&Edit Manual...	Alt-Right Click
+
+Increase &Z Order	=
+Increase &Z Order	=
+
+D&ecrease Z Order	-
+D&ecrease Z Order	-
+
+Increase Object Size &X	Shift-Right
+Increase Object Size &X	Shift-Right
+
+De&crease Object Size X	Shift-Left
+De&crease Object Size X	Shift-Left
+
+Increase Object Size &Y	Shift-Down
+Increase Object Size &Y	Shift-Down
+
+Dec&rease Object Size Y	Shift-Up
+Dec&rease Object Size Y	Shift-Up
+
+&Object Size
+&Object Size
+
+Conditional Direct Map16...
+Conditional Direct Map16...
+
+Remap Direct Map16...
+Remap Direct Map16...
+
+&Edit
+编辑 (&E)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 查看
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Layer &1 (Level)	1
+Layer &1 (Level)	1
+
+Layer &2 (Level/Image)	2
+Layer &2 (Level/Image)	2
+
+Layer &3 (Image)	3
+Layer &3 (Image)	3
+
+&Sprites	4
+&Sprites	4
+
+Sprite &Data (Hex code)	5
+Sprite &Data (Hex code)	5
+
+Screen E&xits	F1
+Screen E&xits	F1
+
+S&ub-Screen Boundaries	F2
+S&ub-Screen Boundaries	F2
+
+&Game View Screen	F3
+&Game View Screen	F3
+
+&Tile Grid	F8
+&Tile Grid	F8
+
+&Zoom x2	F10
+&Zoom x2	F10
+
+Level En&trance	F5
+Level En&trance	F5
+
+&Secondary Level Entrances	F6
+&Secondary Level Entrances	F6
+
+&Midway Point Entrance	F7
+&Midway Point Entrance	F7
+
+&Animation	6
+&Animation	6
+
+&Next Animated Frame	Ctrl+6
+&Next Animated Frame	Ctrl+6
+
+&Reset Animations	Shift+6
+&Reset Animations	Shift+6
+
+Custom Trigger 0
+Custom Trigger 0
+
+Custom Trigger 1
+Custom Trigger 1
+
+Custom Trigger 2
+Custom Trigger 2
+
+Custom Trigger 3
+Custom Trigger 3
+
+Custom Trigger 4
+Custom Trigger 4
+
+Custom Trigger 5
+Custom Trigger 5
+
+Custom Trigger 6
+Custom Trigger 6
+
+Custom Trigger 7
+Custom Trigger 7
+
+Custom Trigger 8
+Custom Trigger 8
+
+Custom Trigger 9
+Custom Trigger 9
+
+Custom Trigger A
+Custom Trigger A
+
+Custom Trigger B
+Custom Trigger B
+
+Custom Trigger C
+Custom Trigger C
+
+Custom Trigger D
+Custom Trigger D
+
+Custom Trigger E
+Custom Trigger E
+
+Custom Trigger F
+Custom Trigger F
+
+Next Custom	Ctrl+F12
+Next Custom	Ctrl+F12
+
+Previous Custom	Ctrl+F11
+Previous Custom	Ctrl+F11
+
+Activate Custom	Ctrl+F10
+Activate Custom	Ctrl+F10
+
+&Custom Triggers
+&Custom Triggers
+
+One Shot Trigger 00
+One Shot Trigger 00
+
+One Shot Trigger 01
+One Shot Trigger 01
+
+One Shot Trigger 02
+One Shot Trigger 02
+
+One Shot Trigger 03
+One Shot Trigger 03
+
+One Shot Trigger 04
+One Shot Trigger 04
+
+One Shot Trigger 05
+One Shot Trigger 05
+
+One Shot Trigger 06
+One Shot Trigger 06
+
+One Shot Trigger 07
+One Shot Trigger 07
+
+One Shot Trigger 08
+One Shot Trigger 08
+
+One Shot Trigger 09
+One Shot Trigger 09
+
+One Shot Trigger 0A
+One Shot Trigger 0A
+
+One Shot Trigger 0B
+One Shot Trigger 0B
+
+One Shot Trigger 0C
+One Shot Trigger 0C
+
+One Shot Trigger 0D
+One Shot Trigger 0D
+
+One Shot Trigger 0E
+One Shot Trigger 0E
+
+One Shot Trigger 0F
+One Shot Trigger 0F
+
+One Shot Trigger 10
+One Shot Trigger 10
+
+One Shot Trigger 11
+One Shot Trigger 11
+
+One Shot Trigger 12
+One Shot Trigger 12
+
+One Shot Trigger 13
+One Shot Trigger 13
+
+One Shot Trigger 14
+One Shot Trigger 14
+
+One Shot Trigger 15
+One Shot Trigger 15
+
+One Shot Trigger 16
+One Shot Trigger 16
+
+One Shot Trigger 17
+One Shot Trigger 17
+
+One Shot Trigger 18
+One Shot Trigger 18
+
+One Shot Trigger 19
+One Shot Trigger 19
+
+One Shot Trigger 1A
+One Shot Trigger 1A
+
+One Shot Trigger 1B
+One Shot Trigger 1B
+
+One Shot Trigger 1C
+One Shot Trigger 1C
+
+One Shot Trigger 1D
+One Shot Trigger 1D
+
+One Shot Trigger 1E
+One Shot Trigger 1E
+
+One Shot Trigger 1F
+One Shot Trigger 1F
+
+Next One Shot	Ctrl+Alt+F12
+Next One Shot	Ctrl+Alt+F12
+
+Previous One Shot	Ctrl+Alt+F11
+Previous One Shot	Ctrl+Alt+F11
+
+Activate One Shot	Ctrl+Alt+F10
+Activate One Shot	Ctrl+Alt+F10
+
+&One Shot Triggers
+&One Shot Triggers
+
+Manual Trigger 0 Increment
+Manual Trigger 0 Increment
+
+Manual Trigger 1 Increment
+Manual Trigger 1 Increment
+
+Manual Trigger 2 Increment
+Manual Trigger 2 Increment
+
+Manual Trigger 3 Increment
+Manual Trigger 3 Increment
+
+Manual Trigger 4 Increment
+Manual Trigger 4 Increment
+
+Manual Trigger 5 Increment
+Manual Trigger 5 Increment
+
+Manual Trigger 6 Increment
+Manual Trigger 6 Increment
+
+Manual Trigger 7 Increment
+Manual Trigger 7 Increment
+
+Manual Trigger 8 Increment
+Manual Trigger 8 Increment
+
+Manual Trigger 9 Increment
+Manual Trigger 9 Increment
+
+Manual Trigger A Increment
+Manual Trigger A Increment
+
+Manual Trigger B Increment
+Manual Trigger B Increment
+
+Manual Trigger C Increment
+Manual Trigger C Increment
+
+Manual Trigger D Increment
+Manual Trigger D Increment
+
+Manual Trigger E Increment
+Manual Trigger E Increment
+
+Manual Trigger F Increment
+Manual Trigger F Increment
+
+Manual Trigger 0 Decrement
+Manual Trigger 0 Decrement
+
+Manual Trigger 1 Decrement
+Manual Trigger 1 Decrement
+
+Manual Trigger 2 Decrement
+Manual Trigger 2 Decrement
+
+Manual Trigger 3 Decrement
+Manual Trigger 3 Decrement
+
+Manual Trigger 4 Decrement
+Manual Trigger 4 Decrement
+
+Manual Trigger 5 Decrement
+Manual Trigger 5 Decrement
+
+Manual Trigger 6 Decrement
+Manual Trigger 6 Decrement
+
+Manual Trigger 7 Decrement
+Manual Trigger 7 Decrement
+
+Manual Trigger 8 Decrement
+Manual Trigger 8 Decrement
+
+Manual Trigger 9 Decrement
+Manual Trigger 9 Decrement
+
+Manual Trigger A Decrement
+Manual Trigger A Decrement
+
+Manual Trigger B Decrement
+Manual Trigger B Decrement
+
+Manual Trigger C Decrement
+Manual Trigger C Decrement
+
+Manual Trigger D Decrement
+Manual Trigger D Decrement
+
+Manual Trigger E Decrement
+Manual Trigger E Decrement
+
+Manual Trigger F Decrement
+Manual Trigger F Decrement
+
+Next Manual	Ctrl+Alt+Shift+F12
+Next Manual	Ctrl+Alt+Shift+F12
+
+Previous Manual	Ctrl+Alt+Shift+F11
+Previous Manual	Ctrl+Alt+Shift+F11
+
+Increment Manual Frame	Ctrl+Alt+Shift+F10
+Increment Manual Frame	Ctrl+Alt+Shift+F10
+
+Decrement Manual Frame	Ctrl+Alt+Shift+F9
+Decrement Manual Frame	Ctrl+Alt+Shift+F9
+
+&Manual Triggers
+&Manual Triggers
+
+Have &Star	Ctrl+7
+Have &Star	Ctrl+7
+
+&Timer Below 100	Ctrl+8
+&Timer Below 100	Ctrl+8
+
+Have 5 &Yoshi Coins	Ctrl+9
+Have 5 &Yoshi Coins	Ctrl+9
+
+&ExAnimation Triggers
+&ExAnimation Triggers
+
+&Silver POW	F11
+&Silver POW	F11
+
+&POW	F12
+&POW	F12
+
+Special &World Passed	7
+Special &World Passed	7
+
+Invisible &POW Objects	8
+Invisible &POW Objects	8
+
+Other &Invisible Objects	9
+Other &Invisible Objects	9
+
+&On/Off Switch On	0
+&On/Off Switch On	0
+
+&Conditional Direct Map16 On	Ctrl+0
+&Conditional Direct Map16 On	Ctrl+0
+
+&Custom Sprites
+&Custom Sprites
+
+&512 Height Background
+&512 Height Background
+
+&Translucent Text and Outlines
+&Translucent Text and Outlines
+
+&Green Switch Blocks
+&Green Switch Blocks
+
+&Yellow Switch Blocks
+&Yellow Switch Blocks
+
+&Blue Switch Blocks
+&Blue Switch Blocks
+
+&Red Switch Blocks
+&Red Switch Blocks
+
+&Switch Blocks
+&Switch Blocks
+
+&View
+查看 (&V)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 编辑器
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Add Objects Window...	Shift+Z
+&Add Objects Window...	Shift+Z
+
+Add &Sprites Window...	Shift+X
+Add &Sprites Window...	Shift+X
+
+&Palette Editor Window...
+&Palette Editor Window...
+
+&8x8 Tile Editor Window...
+&8x8 Tile Editor Window...
+
+&16x16 Tile Map Editor Window...
+&16x16 Tile Map Editor Window...
+
+&Background Tile Map Editor Window...
+&Background Tile Map Editor Window...
+
+&Overworld Editor Window...
+&Overworld Editor Window...
+
+&Editors
+编辑器 (&E)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 关卡
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Super GFX Bypass...
+&Super GFX Bypass...
+
+Layer &3 GFX/Tilemap Bypass...
+Layer &3 GFX/Tilemap Bypass...
+
+B&ypass Standard FG/BG GFX List...
+B&ypass Standard FG/BG GFX List...
+
+Byp&ass Standard SP GFX List...
+Byp&ass Standard SP GFX List...
+
+&Extend Animated Tile GFX...
+&Extend Animated Tile GFX...
+
+&Old GFX Bypass...
+&Old GFX Bypass...
+
+&GFX Index in header...
+&GFX Index in header...
+
+Edit &Level ExAnimated Frames...
+Edit &Level ExAnimated Frames...
+
+Edit &Global ExAnimated Frames...
+Edit &Global ExAnimated Frames...
+
+Edit &Animation Settings...
+Edit &Animation Settings...
+
+Modify Screen E&xits...
+Modify Screen E&xits...
+
+Modify &Main and Midway Entrance...
+Modify &Main and Midway Entrance...
+
+Modify Secondary &Entrances...
+Modify Secondary &Entrances...
+
+Scan for &Undefined Exits
+Scan for &Undefined Exits
+
+Change P&roperties in header...
+Change P&roperties in header...
+
+&Change Properties in Sprite header...
+&Change Properties in Sprite header...
+
+Change &Other Properties...
+Change &Other Properties...
+
+Change La&yer 3 Settings...
+Change La&yer 3 Settings...
+
+&Bypass Music && Time Limit Setting...
+&Bypass Music && Time Limit Setting...
+
+&Level
+关卡 (&L)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 选项
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+General &Options...
+General &Options...
+
+&Restore Point Options...
+&Restore Point Options...
+
+Change &Animation Rate...
+Change &Animation Rate...
+
+&Use FastROM Addressing for this ROM
+&Use FastROM Addressing for this ROM
+
+Enable &FastROM Speed && Apply Patch
+Enable &FastROM Speed && Apply Patch
+
+Use &SA-1 RAM Remap for this ROM
+Use &SA-1 RAM Remap for this ROM
+
+&Compression Options for this ROM...
+&Compression Options for this ROM...
+
+&Options
+选项 (&O)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 帮助
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Contents
+帮助内容 (&C)
+
+&About Lunar Magic...
+关于 Lunar M&agic...
+
+&Help
+帮助 (&H)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 文件
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Reload && Discard Unsaved Changes
+&Reload && Discard Unsaved Changes
+
+&Save Overworld to ROM
+&Save Overworld to ROM
+
+&Load Credits...	Ctrl+F11
+&Load Credits...	Ctrl+F11
+
+&Save Credits...	Ctrl+F12
+&Save Credits...	Ctrl+F12
+
+&Credits
+&Credits
+
+&Load Title Screen...	F11
+&Load Title Screen...	F11
+
+&Save Title Screen...	F12
+&Save Title Screen...	F12
+
+Insert Title Moves &Playback ASM && Data...	Ctrl+P
+Insert Title Moves &Playback ASM && Data...	Ctrl+P
+
+Export Title Moves Playback Data...
+Export Title Moves Playback Data...
+
+Install Title Moves &Recording ASM...	Ctrl+R
+Install Title Moves &Recording ASM...	Ctrl+R
+
+&Uninstall Title Moves Recording ASM...	Ctrl+U
+&Uninstall Title Moves Recording ASM...	Ctrl+U
+
+&Title Screen
+&Title Screen
+
+&Load Layer 3 of Level	Alt+F11
+&Load Layer 3 of Level	Alt+F11
+
+&Save Layer 3 of Level to ROM && ExGFX File	Alt+F12
+&Save Layer 3 of Level to ROM && ExGFX File	Alt+F12
+
+&Preview Layer 3 in Level	Space
+&Preview Layer 3 in Level	Space
+
+&Layer 3 Level
+&Layer 3 Level
+
+&Load Layer 3 of Submap	Shift+F11
+&Load Layer 3 of Submap	Shift+F11
+
+&Save Layer 3 of Submap to ROM && ExGFX File	Shift+F12
+&Save Layer 3 of Submap to ROM && ExGFX File	Shift+F12
+
+&Layer 3 Submap
+&Layer 3 Submap
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 编辑
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Layer 1 &16x16 Editor Mode	`
+Layer 1 &16x16 Editor Mode	`
+
+Layer 1 Event Editor &Mode	`
+Layer 1 Event Editor &Mode	`
+
+Layer 2 &8x8 Editor Mode	Esc
+Layer 2 &8x8 Editor Mode	Esc
+
+Layer 2 &Event Editor Mode	Esc
+Layer 2 &Event Editor Mode	Esc
+
+Sprite Editor &Mode	Tab
+Sprite Editor &Mode	Tab
+
+&Insert	Insert
+&Insert	Insert
+
+&Increase Palette of Event Tiles	Pg-Up
+&Increase Palette of Event Tiles	Pg-Up
+
+&Decrease Palette of Event Tiles	Pg-Down
+&Decrease Palette of Event Tiles	Pg-Down
+
+Increase Event Tile &Z Order	=
+Increase Event Tile &Z Order	=
+
+D&ecrease Event Tile Z Order	-
+D&ecrease Event Tile Z Order	-
+
+&Next Event	Pg-Up
+&Next Event	Pg-Up
+
+&Previous Event	Pg-Down
+&Previous Event	Pg-Down
+
+&Next Event Tile	Home
+&Next Event Tile	Home
+
+&Previous Event Tile	End
+&Previous Event Tile	End
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 查看
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Show &Level Numbers	F1
+Show &Level Numbers	F1
+
+Show &Event Numbers	F2
+Show &Event Numbers	F2
+
+Special &World Passed Palette	F3
+Special &World Passed Palette	F3
+
+Show &Star/Pipe Numbers	F5
+Show &Star/Pipe Numbers	F5
+
+Show &Exit Path Numbers	F6
+Show &Exit Path Numbers	F6
+
+Show &Koopa Teleport Numbers	F7
+Show &Koopa Teleport Numbers	F7
+
+Layer &1	1
+Layer &1	1
+
+Layer &2	2
+Layer &2	2
+
+&Sprite Data (Hex code)	5
+&Sprite Data (Hex code)	5
+
+&Future Layer 1 Tiles	7
+&Future Layer 1 Tiles	7
+
+&Static Layer 2 Tiles	8
+&Static Layer 2 Tiles	8
+
+Layer 1 &Mario Paths	9
+Layer 1 &Mario Paths	9
+
+Make All Mario Paths &Translucent	0
+Make All Mario Paths &Translucent	0
+
+Highlight &Next Event Tiles (Red)
+Highlight &Next Event Tiles (Red)
+
+Highlight &Previous Event Tiles (Blue)
+Highlight &Previous Event Tiles (Blue)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 编辑器
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Overworld &Palette Editor...
+Overworld &Palette Editor...
+
+8x8 Overworld Tile Selector...
+8x8 Overworld Tile Selector...
+
+Layer 1 &16x16 Tile Selector...
+Layer 1 &16x16 Tile Selector...
+
+Layer &2 Event Tile Selector...
+Layer &2 Event Tile Selector...
+
+Submap &GFX...
+Submap &GFX...
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 世界地图
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Submap Layer &3 GFX/Tilemap Bypass...
+Submap Layer &3 GFX/Tilemap Bypass...
+
+&Change Max Event 6x6 Tile Area...
+&Change Max Event 6x6 Tile Area...
+
+Change Events &Passed...
+Change Events &Passed...
+
+Modify &Level Tile Settings...	Alt-Right Click
+Modify &Level Tile Settings...	Alt-Right Click
+
+&Destroy Level Tile Settings...
+&Destroy Level Tile Settings...
+
+Set &Koopa Teleport Here...
+Set &Koopa Teleport Here...
+
+&Exit Path Tile Settings...
+&Exit Path Tile Settings...
+
+&Star and Pipe Tile Settings...
+&Star and Pipe Tile Settings...
+
+&Link Star/Pipe/Exit Tiles Together...	Alt-Left Click
+&Link Star/Pipe/Exit Tiles Together...	Alt-Left Click
+
+Edit Boss Sequence &Text...
+Edit Boss Sequence &Text...
+
+Edit Message Box &Text...
+Edit Message Box &Text...
+
+Edit Level &Names...
+Edit Level &Names...
+
+Change &Boss Sequence Levels...
+Change &Boss Sequence Levels...
+
+Change &Special Message Levels...
+Change &Special Message Levels...
+
+Change &Special World Levels...
+Change &Special World Levels...
+
+Change &No-Auto-Move Levels...
+Change &No-Auto-Move Levels...
+
+Edit &Sprite List...
+Edit &Sprite List...
+
+Edit &Reveal Tile List...
+Edit &Reveal Tile List...
+
+Edit Submap &Music Selection...
+Edit Submap &Music Selection...
+
+Extra &Options...
+Extra &Options...
+
+&Overworld
+世界地图 (&O)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 选项
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+&Allow move/copy/paste/delete on Layer 1 Tile Settings
+&Allow move/copy/paste/delete on Layer 1 Tile Settings
+
+Auto-&Deselect on Editor Select
+Auto-&Deselect on Editor Select
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; OverWorld 菜单 - 帮助
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+O&ptions
+选项 (&p)
+
+&About Overworld Editor...
+关于世界地图编辑器 (&A)...
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 一部分窗体控件
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Lunar Magic
+Lunar Magic 汉化版
+
+Add Objects Window
+添加物体
+
+Add Sprites Window
+添加精灵
+
+8x8 Tile Editor
+8x8 贴图编辑器
+
+Flip &X
+&X 翻转
+
+Flip &Y
+&Y 翻转
+
+; 按钮放不下
+&Rot. 90°
+旋转 &90°
+
+&Rot. 90
+旋转 &90°
+
+&Map Col.
+&Map Col.
+
+&Do Map
+&Do Map
+
+Page Up
+↑
+
+Page Dn.
+↓
+
+Pal. Up
+调色 ↑
+
+Pal. Dn.
+调色 ↓
+
+16x16 Tile Map Editor
+16x16 贴图编辑器
+
+16x16 Tile Viewer
+16x16 贴图查看器
+
+Select all FG tiles
+全选前景贴图
+
+Select all BG tiles
+全选背景贴图
+
+Select all tiles
+全选所有贴图
+
+Edit 8x8 Attributes
+编辑 8x8 属性
+
+Edit 16x16 Attributes
+编辑 16x16 属性
+
+Flip X
+X 翻转
+
+Flip Y
+Y 翻转
+
+Background Tile Map Editor
+背景贴图映射编辑器
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 一些非标字串
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 关卡设计器
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+%sEntrance to level %02X
+%s关卡 %02X 的主入口
+
+Midway Entrance
+中继点入口
+
+Secondary Entrance #%03X
+次入口 #%03X
+
+ to Level %03X
+ 到关卡 %03X
+
+ : Exit to Level %X
+ : 进入关卡 %X
+
+ : Secondary Exit #%X to %X
+ : 进入 #%X 于关卡 %X
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 关卡设计器 - 状态栏
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Opening ROM: %s...
+打开镜像: %s...
+
+Selection %ix%i
+选区大小 %ix%i
+
+&About %s...
+关于 %s...
+
+About %s...
+关于 %s...
+
+Rendering level %X...
+渲染关卡 %X...
+
+done.
+完毕
+
+%s%s\r\n%s Object Command : %X
+%s%s\r\n%s 对象指令 : %X
+
+Invalid Area of Level %X.
+关卡 %X 的无效区域。
+
+%i object%s selected.
+选中了 %i 个对象。
+
+%i sprite%s selected.
+选中了 %i 个精灵。
+
+Move tiles %ix%i
+移动贴图 %ix%i
+
+Move sprites %ix%i
+移动精灵 %ix%i
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 关卡设计器 - 工具栏对话框
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+TS & TSW: %02X\r\nCGADSUB: %02X\r\nTM & TMW: %02X\r\nMax Screens: %02X\r\nLayout: %s
+TS & TSW: %02X\r\nCGADSUB: %02X\r\nTM & TMW: %02X\r\n屏幕数目: %02X\r\n布局: %s
+
+Sprite Layer: %02X\r\nFight Mode: %02X\r\nScreen Mode: %02X\r\nLayer 2: %s\r\nLayer 2 Interact: %s
+精灵图层: %02X\r\n对战模式: %02X\r\n屏幕模式: %02X\r\n图层 2: %s\r\n图层 2 交互: %s
+
+%s %s%s%slevel.
+%s %s%s%s关卡。
+
+Time %02X00
+时间 %02X00
+
+%02X Screen%s
+%02X 个屏幕
+
+Index %X%s
+索引 %X%s
+
+H-Scroll: %s, V-Scroll: %s
+横向卷轴: %s, 垂直卷轴: %s
+
+Slot %02X: %s
+槽位 %02X: %s
+
+Type: %s
+类型: %s
+
+Trigger: %s
+触发器: %s
+
+Frames %02X-%02X
+动画帧 %02X-%02X
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 关卡设计器 - 贴图/调色板/其它
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+No Tile Selected for editing.
+未选中编辑用贴图。
+
+%s%s\r\nDirect Map16 Access Tile : %X
+%s%s\r\n直接 Map16 链接贴图 : %X
+
+Palette %i
+调色板 %i
+
+8x8 Overworld Tile Selector
+8x8 世界地图贴图选择器
+
+Priority
+优先级
+
+Apply Flip to all tiles.
+应用翻转至所有贴图。
+
+%03X Not Inserted
+%03X 未插入
+
+%02X Not Inserted
+%02X 未插入
+
+%02X DO NOT USE!
+%02X 不要使用!
+
+%02X Skip File
+%02X 跳过文件
+
+Tile 0x%X Address 0x%X.
+贴图 0x%X 地址 0x%X.
+
+Tile 0x%X (Address 0x%X)
+贴图 0x%X (地址 0x%X)
+
+Palette %X
+调色板 %X
+
+Invalid Area
+无效区域
+
+Tile 0x%X Selected.
+选中了 0x%X 贴图。
+
+Page 0x%X
+第 0x%X 页
+
+%i tile%s selected.
+选中 %i 个贴图。
+
+Layer 1 16x16 Tile Selector
+图层 1: 16x16 贴图选择器
+
+Layer 2 Event Tile Selector
+图层 2: 事件贴图选择器
+
+Palette %X of %s%s. %s
+调色板 %X/%s%s. %s
+
+%s%s%s\r\nSprite Command : %X
+%s%s%s\r\n精灵指令 : %X
+
+You can use the Home/End keys to change the local palette, and the Page Up/Down keys to change the submap palette.
+你可以使用键盘上的 Home/End 更换本地调色板，然后使用 Page Up/Page Down 键更换子地图调色板。
+
+%s%s palette/graphics used for Event Tile area.
+事件贴图区域已应用 %s%s 的调色板及图形。
+
+8x8 Tile Viewer
+8x8 贴图查看器
+
+%X,%X:%X at %X
+%X,%X:%X 于 %X
+
+Open the 16x16 editor to pages %X+ to select other tiles you can use.
+打开 16x16 编辑器到 %X+ 页面来选择其它你可以使用的贴图。
+
+Tile %X.
+贴图 %X。
+
+Direct Map16 Access Tile : %X
+直接 Map16 访问贴图 : %X
+
+Back Area Color %X
+背景区域颜色 %X
+
+BG Palette %X
+背景调色板 %X
+
+Sprite Palette %X
+精灵调色板 %X
+
+FG Palette %X
+前景调色板 %X
+
+All GFX files have been extracted to:\r\n%s
+所有图形文件已经成功提取至:\r\n%s
+
+Main entrance into this level. You can adjust its properties using an alt-right click in sprite editing mode.
+该关卡的主要入口。你可以在右键精灵的时候按住 Alt 进入编辑模式。
+
+%s%s\r\nExtended Object Command : %X
+%s%s\r\n扩展对象指令 : %X
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 贴图编辑器
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Priority --
+--  优先级
+
+Priority Off
+关闭优先级
+
+Priority On
+启用优先级
+
+Palette --
+调色板 --
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 关卡入口
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Do Nothing - Cannot Bring Item
+什么都不做 - 无法携带物品
+
+Horizontal Pipe Exit Left
+钻出管道 - 面向左边
+
+Horizontal Pipe Exit Right
+钻出管道 - 面向右边
+
+Vertical Pipe Exit Up
+钻出管道 - 面向上方
+
+Vertical Pipe Exit Down
+钻出管道 - 面向下方
+
+Do Nothing (Slippery Level) - Cannot Bring Item
+什么都不做 (滑行关卡) - 无法携带物品
+
+Shoot From Slanted Pipe Right
+斜管道喷射向右
+
+Vertical Pipe Exit Down (Water Level)
+钻出管道 (水下关) - 面向下方
+
+S=0 (Top)
+S=0 (上屏)
+
+S=1 (Bottom)
+S=1 (下屏)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 调色板
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Mario Palette
+马里奥调色板
+
+Luigi Palette
+路易吉调色板
+
+Mario Flower Palette
+火焰马里奥调色板
+
+Luigi Flower Palette
+火焰路易吉调色板
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 工具栏 - 提取/插入图形
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Extracting GFX %02X...
+提取图形 %02X...
+
+Inserting GFX %02X...
+插入图形 %02X...
+
+GFX Insertion Complete! (0x%X + 0x%X = 0x%X bytes)
+图形插入完毕! (0x%X + 0x%X = 0x%X 字节)
+
+ExGFX Insertion Complete! (0x%X bytes)
+扩展图形插入完毕! (0x%X 字节)
+
+Insert all GFX to ROM.
+插入所有图形到镜像。
+
+Insert all ExGFX to ROM.
+插入所有扩展图形到镜像。
+
+GFX Extraction Complete!
+提取图形完毕!
+
+ExGFX Extraction Complete!
+提取扩展图形完毕!
+
+Erasing ExGFX from ROM...
+从镜像擦除扩展图形...
+
+索引 3 No Track
+索引 3 无追踪
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 图层 3 设定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+%s (current tileset is %X:%s)
+%s (当前贴图集为 %X:%s)
+
+Tileset Specific (当前贴图集为 7:Beta Cage)
+指定贴图集
+
+No Layer 3
+不启用图层 3
+
+Water, high and low tides
+底部涨潮落潮
+
+Water, low tide only (smasher if tileset is 1)
+底部低潮 (如果贴图集为 1 则显示为 smasher)
+
+None
+无
+
+Constant
+固定
+
+Variable
+变化
+
+Variable 2
+变化 2
+
+Slow
+慢
+
+Not Used
+未启用
+
+Auto-Scroll Up Slow
+自动缓慢向上滚动
+
+Auto-Scroll Up Normal
+自动向上滚动
+
+Auto-Scroll Up Fast
+自动快速向上滚动
+
+Auto-Scroll Up Fast 2
+自动快速向上滚动 2
+
+Auto-Scroll Down Slow
+自动缓慢向下滚动
+
+Auto-Scroll Down Normal
+自动向下滚动
+
+Auto-Scroll Down Fast
+自动快速向下滚动
+
+Auto-Scroll Down Fast 2
+自动快速向下滚动 2
+
+Not Used 1
+未启用 1
+
+Not Used 2
+未启用 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 时间、音乐设定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Do not bypass level header set
+不强行更改音乐设定
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 添加物品
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Standard Objects
+标准物体
+
+Tileset Specific Objects
+贴图集指定物品
+
+Extended Objects
+扩展物品
+
+Direct Map16 Access (Lunar Magic)
+直接访问 Map16 (Lunar Magic)
+
+CTRL + Right Click to paste from here into level in layer editing mode.
+当您在图层编辑模式时，在设计器按住 Ctrl 后右键即可插入。
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 添加精灵
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Standard Sprites
+标准精灵
+
+Tileset Specific Sprites
+贴图集指定精灵
+
+Special Commands and Generators
+特殊指令以及生成器
+
+Custom Collections of Sprites
+收藏夹里的精灵
+
+Remember to hit F9 to save changes.
+记得按下 F9 保存更改。
+
+CTRL + Right Click to paste from here into level in sprite editing mode.
+当您在精灵编辑模式时，在设计器按住 Ctrl 后右键即可插入。
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 窗口 - 更改关卡属性
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+No Vertical Scroll
+无垂直滚动
+
+Vertical Scroll at Will
+需要时垂直滚动
+
+No Vertical Scroll unless Flying/Climbing/Etc
+不垂直滚动除非飞行、爬行等操作
+
+No Vertical or Horizontal Scroll
+无垂直或横向滚动
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 世界地图编辑器
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Overworld Editor
+世界宏观编辑器
+
+Tile 0x%X.
+贴图 0x%X。
+
+Tile 0x%X %s.
+贴图 0x%X %s。
+
+%X: %02X Not used
+%X: %02X 未使用
+
+%02X, %02X, and %02X.
+%02X、%02X 以及 %02X。
+
+Font: %s%s
+字体: %s%s
+
+ Slow
+ 缓慢
+
+ Normal
+ 通常
+
+ Fast
+ 快速
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 杂类
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Change Compression.
+更换压缩方案。
+
+ - %s to %s.
+ - 从 %s 到 %s。
+
+Open "16x16 Tile Map Editor" Window. Background tiles are on pages %X+. To paste selected tiles from this, hold down control and right click in background editor. You can also double click a tile in the background editor to auto-select it in the Map16 editor.
+开启“16x16 贴图编辑器”窗口。背景贴图位于页面 %X+。如果需要从这里粘贴选中的贴图，按住 Ctrl 然后在背景编辑器右键即可。你也可以在背景编辑器双击鼠标左键来自动在 Map16 编辑器选中。
+ 
+Page you wish to jump to. The foreground tiles start on page %X, while the background tiles start on page 0x%X.
+您希望跳转的页面。前景贴图从 %X 页开始，而背景贴图则从 %#X 页开始。
+ 
+%s : Super Mario World Level Editor
+%s : 超级马里奥世界关卡编辑器汉化版
