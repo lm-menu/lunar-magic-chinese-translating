@@ -125,8 +125,7 @@ Run ROM in &Emulator	F4
 关闭默认模拟器声音 (&M)
 
 Swap &F4/Ctrl+F4
-调换 &F4/Ctrl+F4
-快捷键功能 
+调换 &F4/Ctrl+F4 快捷键功能 
 
 &Emulator
 模拟器 (&E)
