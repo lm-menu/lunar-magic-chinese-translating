@@ -1,5 +1,5 @@
 Translator
-Jixun, <your name here>
+Jixun, tcdw
 
 ; 可以为 True 或 False
 ; 为 True 时将输出至终端，否则输出至 lm_menu.log
@@ -89,64 +89,65 @@ Extract Shared Palettes from &ROM...
 从镜像提取共享调色板 (&R)...
 
 Insert Shared Palettes to RO&M...
-Insert Shared Palettes to RO&M...
+导入共享调色版到镜像 (&M)...
 
 &Palettes
-&Palettes
+调色版 (&P)
 
 &Export Multiple Levels to Files...
-&Export Multiple Levels to Files...
+导出大量关卡为文件 (&E)...
 
 &Import Multiple Levels from Files...
-&Import Multiple Levels from Files...
+从文件导入大量关卡 (&I)...
 
 &Clear Original Level Data Area...
-&Clear Original Level Data Area...
+清除原有关卡数据 (&C)...
 
 &Export Level to Image File...
-&Export Level to Image File...
+导出关卡为图片 (&E)...
 
 &Levels
-&Levels
+关卡 (&L) 
 
 Run ROM in &Emulator	F4
-Run ROM in &Emulator	F4
+在模拟器中运行镜像 (&E) F4
 
 &Setup Emulator...
-&Setup Emulator...
+模拟器设置 (&S)...
 
 &Run/Stop Internal Emulator	Ctrl+F4
-&Run/Stop Internal Emulator	Ctrl+F4
+运行 / 停止内置模拟器 (&R)	Ctrl+F4
 
 &Pause Internal Emulator	Pause
-&Pause Internal Emulator	Pause
+暂停内置模拟器 (&P)	Pause
 
 &Mute Internal Emulator
-&Mute Internal Emulator
+关闭默认模拟器声音 (&M)
 
 Swap &F4/Ctrl+F4
-Swap &F4/Ctrl+F4
+调换 &F4/Ctrl+F4
+快捷键功能 
 
 &Emulator
-&Emulator
+模拟器 (&E)
 
 Expand ROM to &2MB
-Expand ROM to &2MB
+拓展镜像大小到 &2MB
 
 Expand ROM to &3MB
-Expand ROM to &3MB
+拓展镜像大小到 &3MB
 
 Expand ROM to &4MB
-Expand ROM to &4MB
+拓展镜像大小到 &4MB
 
 Expand ROM to &6MB (SA-1)
-Expand ROM to &6MB (SA-1)
+拓展镜像大小到 &6MB (SA-1)
 
 Expand ROM to &8MB (SA-1)
-Expand ROM to &8MB (SA-1)
+拓展镜像大小到 &8MB (SA-1)
 
 E&xpand ROM
-E&xpand ROM
+拓展镜像大小 (&x)
 
 &Create a Full Restore Point...
 &Create a Full Restore Point...
