@@ -110,7 +110,7 @@ Insert Shared Palettes to RO&M...
 关卡 (&L) 
 
 Run ROM in &Emulator	F4
-在模拟器中运行镜像 (&E) F4
+在模拟器中运行镜像 (&E)	F4
 
 &Setup Emulator...
 模拟器设置 (&S)...
@@ -149,25 +149,25 @@ E&xpand ROM
 拓展镜像大小 (&x)
 
 &Create a Full Restore Point...
-&Create a Full Restore Point...
+创建完整恢复点 (&C)...
 
 &Restore ROM to previous state...
-&Restore ROM to previous state...
+恢复镜像到以前的修改 (&R)...
 
 &Create IPS file for this ROM...
-&Create IPS file for this ROM...
+通过该镜像创建 IPS 文件 (&C)...
 
 &Apply IPS file to this ROM...
-&Apply IPS file to this ROM...
+打入 IPS 文件到该镜像 (&A)...
 
 &Restore
-&Restore
+恢复 (&R)
 
 &Recent Files
-&Recent Files
+最近打开的文件 (&R)
 
 E&xit
-E&xit
+退出 (E&)
 
 &File
 文件 (&F)
@@ -177,64 +177,64 @@ E&xit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 Edit Level Layer &1 Mode	`
-Edit Level Layer &1 Mode	`
+关卡图层 &1 编辑模式	`
 
 Edit Level Layer &2 Mode	`
-Edit Level Layer &2 Mode	`
+关卡图层 &2 编辑模式	`
 
 Edit &Sprites Mode	Esc
-Edit &Sprites Mode	Esc
+精灵编辑模式 (&S)	Esc
 
 &Undo	Ctrl+Z
-&Undo	Ctrl+Z
+撤销 (&U)	Ctrl+Z
 
 &Redo	Ctrl+Y
-&Redo	Ctrl+Y
+重做 (&R)	Ctrl+Y
 
 Cu&t	Ctrl+X
-Cu&t	Ctrl+X
+剪切 (&t)	Ctrl+X
 
 &Copy	Ctrl+C
-&Copy	Ctrl+C
+复制 (&C)	Ctrl+C
 
 &Paste	Ctrl+V
-&Paste	Ctrl+V
+粘贴 (&P)	Ctrl+V
 
 &Delete	Delete
-&Delete	Delete
+删除 (&D)	Delete
 
 &Insert Manual...	Insert
-&Insert Manual...	Insert
+手工插入 (&I)...	Insert
 
 &Edit Manual...	Alt-Right Click
-&Edit Manual...	Alt-Right Click
+手工编辑 (&E)...	Alt-Right Click
 
 Increase &Z Order	=
-Increase &Z Order	=
+增加层次位置 (&Z)	=
 
 D&ecrease Z Order	-
-D&ecrease Z Order	-
+减少层次位置	-
 
 Increase Object Size &X	Shift-Right
-Increase Object Size &X	Shift-Right
+增大物体长度 (&X)	Shift-Right
 
 De&crease Object Size X	Shift-Left
-De&crease Object Size X	Shift-Left
+减小物体长度	Shift-Left
 
 Increase Object Size &Y	Shift-Down
-Increase Object Size &Y	Shift-Down
+增大物体长度 (&Y)	Shift-Down
 
 Dec&rease Object Size Y	Shift-Up
-Dec&rease Object Size Y	Shift-Up
+减小物体长度	Shift-Up
 
 &Object Size
-&Object Size
+物体大小 (&O)
 
 Conditional Direct Map16...
 Conditional Direct Map16...
 
 Remap Direct Map16...
-Remap Direct Map16...
+重排当前关卡的 Map16 图块 ...
 
 &Edit
 编辑 (&E)
