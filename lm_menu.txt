@@ -244,16 +244,16 @@ Remap Direct Map16...
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 Layer &1 (Level)	1
-Layer &1 (Level)	1
+图层 &1 (关卡)	1
 
 Layer &2 (Level/Image)	2
-Layer &2 (Level/Image)	2
+图层 &2 (关卡 / 背景)	2
 
 Layer &3 (Image)	3
-Layer &3 (Image)	3
+图层 &3 (背景)	3
 
 &Sprites	4
-&Sprites	4
+精灵 (&S)	4
 
 Sprite &Data (Hex code)	5
 Sprite &Data (Hex code)	5
