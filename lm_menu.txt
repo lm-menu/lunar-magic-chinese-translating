@@ -256,88 +256,88 @@ Layer &3 (Image)	3
 精灵 (&S)	4
 
 Sprite &Data (Hex code)	5
-Sprite &Data (Hex code)	5
+精灵数据 (Hex 代码) &D	5
 
 Screen E&xits	F1
-Screen E&xits	F1
+屏幕出口 (&x)	F1
 
 S&ub-Screen Boundaries	F2
-S&ub-Screen Boundaries	F2
+子屏幕边界 (&u)	F2
 
 &Game View Screen	F3
-&Game View Screen	F3
+游戏视角屏幕 (&G)	F3
 
 &Tile Grid	F8
-&Tile Grid	F8
+图块网格 (&T)	F8
 
 &Zoom x2	F10
-&Zoom x2	F10
+放大二倍 (&Z)	F10
 
 Level En&trance	F5
-Level En&trance	F5
+关卡出口 (&t)	F5
 
 &Secondary Level Entrances	F6
-&Secondary Level Entrances	F6
+次关卡出口 (&S)	F6
 
 &Midway Point Entrance	F7
-&Midway Point Entrance	F7
+关卡中点入口 (&M)	F7
 
 &Animation	6
-&Animation	6
+动画 (&A)	6
 
 &Next Animated Frame	Ctrl+6
-&Next Animated Frame	Ctrl+6
+动画行进至下一帧 (&N)	Ctrl+6
 
 &Reset Animations	Shift+6
-&Reset Animations	Shift+6
+还原动画状态 (&R)	Shift+6
 
 Custom Trigger 0
-Custom Trigger 0
+自定义触发器 0
 
 Custom Trigger 1
-Custom Trigger 1
+自定义触发器 1
 
 Custom Trigger 2
-Custom Trigger 2
+自定义触发器 2
 
 Custom Trigger 3
-Custom Trigger 3
+自定义触发器 3
 
 Custom Trigger 4
-Custom Trigger 4
+自定义触发器 4
 
 Custom Trigger 5
-Custom Trigger 5
+自定义触发器 5
 
 Custom Trigger 6
-Custom Trigger 6
+自定义触发器 6
 
 Custom Trigger 7
-Custom Trigger 7
+自定义触发器 7
 
 Custom Trigger 8
-Custom Trigger 8
+自定义触发器 8
 
 Custom Trigger 9
-Custom Trigger 9
+自定义触发器 9
 
 Custom Trigger A
-Custom Trigger A
+自定义触发器 A
 
 Custom Trigger B
-Custom Trigger B
+自定义触发器 B
 
 Custom Trigger C
-Custom Trigger C
+自定义触发器 C
 
 Custom Trigger D
-Custom Trigger D
+自定义触发器 D
 
 Custom Trigger E
-Custom Trigger E
+自定义触发器 E
 
 Custom Trigger F
-Custom Trigger F
+自定义触发器 F
 
 Next Custom	Ctrl+F12
 Next Custom	Ctrl+F12
