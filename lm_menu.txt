@@ -727,25 +727,25 @@ Change La&yer 3 Settings...
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 General &Options...
-General &Options...
+一般选项 (&O)...
 
 &Restore Point Options...
-&Restore Point Options...
+恢复点选项 (&R)...
 
 Change &Animation Rate...
-Change &Animation Rate...
+设置动画频率 (&A)...
 
 &Use FastROM Addressing for this ROM
-&Use FastROM Addressing for this ROM
+对该镜像使用 FastROM 编址方式 (&U)
 
 Enable &FastROM Speed && Apply Patch
-Enable &FastROM Speed && Apply Patch
+启用 &FastROM 加速并打入补丁
 
 Use &SA-1 RAM Remap for this ROM
-Use &SA-1 RAM Remap for this ROM
+对该镜像使用 &SA-1 RAM 编址方式
 
 &Compression Options for this ROM...
-&Compression Options for this ROM...
+对该镜像的压缩选项 (&C)...
 
 &Options
 选项 (&O)
@@ -768,25 +768,25 @@ Use &SA-1 RAM Remap for this ROM
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 &Reload && Discard Unsaved Changes
-&Reload && Discard Unsaved Changes
+重新加载并放弃未保存的更改 (&R)
 
 &Save Overworld to ROM
-&Save Overworld to ROM
+保存世界地图到镜像 (&S)
 
 &Load Credits...	Ctrl+F11
-&Load Credits...	Ctrl+F11
+载入致谢列表 (&L)	Ctrl+F11
 
 &Save Credits...	Ctrl+F12
-&Save Credits...	Ctrl+F12
+保存致谢列表 (&S)	Ctrl+F12
 
 &Credits
-&Credits
+致谢列表 (&C)
 
 &Load Title Screen...	F11
-&Load Title Screen...	F11
+载入标题画面 (&L)	F11
 
 &Save Title Screen...	F12
-&Save Title Screen...	F12
+保存标题画面 (&S)	F12
 
 Insert Title Moves &Playback ASM && Data...	Ctrl+P
 Insert Title Moves &Playback ASM && Data...	Ctrl+P
@@ -1505,6 +1505,7 @@ Extended Objects
 
 Direct Map16 Access (Lunar Magic)
 直接访问 Map16 (Lunar Magic)
+
 
 CTRL + Right Click to paste from here into level in layer editing mode.
 当您在图层编辑模式时，在设计器按住 Ctrl 后右键即可插入。
