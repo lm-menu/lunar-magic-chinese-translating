@@ -571,34 +571,34 @@ Decrement Manual Frame	Ctrl+Alt+Shift+F9
 &Manual Triggers
 
 Have &Star	Ctrl+7
-Have &Star	Ctrl+7
+有无敌星 (&S)	Ctrl+7
 
 &Timer Below 100	Ctrl+8
-&Timer Below 100	Ctrl+8
+剩余时间低于 100 (&T)	Ctrl+8
 
 Have 5 &Yoshi Coins	Ctrl+9
-Have 5 &Yoshi Coins	Ctrl+9
+有 5 枚耀西币 (&Y)	Ctrl+9
 
 &ExAnimation Triggers
-&ExAnimation Triggers
+附加动作触发器 (&E)
 
 &Silver POW	F11
-&Silver POW	F11
+银色 POW (&S)	F11
 
 &POW	F12
 &POW	F12
 
 Special &World Passed	7
-Special &World Passed	7
+特别世界已通过 (&)	7
 
 Invisible &POW Objects	8
-Invisible &POW Objects	8
+隐藏的 &POW 物体	8
 
 Other &Invisible Objects	9
-Other &Invisible Objects	9
+其它隐藏物体 (&I)	9
 
 &On/Off Switch On	0
-&On/Off Switch On	0
+开关开启 (&O)	0
 
 &Conditional Direct Map16 On	Ctrl+0
 &Conditional Direct Map16 On	Ctrl+0
